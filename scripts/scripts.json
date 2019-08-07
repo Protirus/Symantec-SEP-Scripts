@@ -32,5 +32,16 @@
         "sources": [
             "https://www.symantec.com/connect/articles/handy-sql-queries-sepm-v14"
         ]
+    },
+    {
+        "name":"List of Unmanaged Detectors.sql",
+        "versions":["12.x"],
+        "author": {
+            "name": "greg12",
+            "link": "https://www.symantec.com/connect/user/greg12"
+        },
+        "sources": [
+            "https://www.symantec.com/connect/articles/handy-sql-queries-sepm-v14"
+        ]
     }
 ]
