@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Symantec DLP SQL</title>
+    <title>Symantec SEP Scripts</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
@@ -19,7 +19,7 @@
 
     <div ng-controller="MainCtrl" data-ng-init="init()">
         <main>
-            <h1>Symantec DLP SQL</h1>
+            <h1>Symantec SEP Scripts</h1>
         </main>
 
         <div class="container">
@@ -39,20 +39,6 @@
 
             <div class="row">
                 <div class="col-md-2">
-
-                    <!-- <div id="jstree"> -->
-                        <!-- in this example the tree is populated from inline HTML
-                        <ul>
-                            <li>Root node 1
-                            <ul>
-                                <li id="child_node_1">Child node 1</li>
-                                <li>Child node 2</li>
-                            </ul>
-                            </li>
-                            <li>Root node 2</li>
-                        </ul> -->
-                    <!-- </div> -->
-
                     <div>
                         <p ng-repeat="file in files | filter:searchText"
                             ng-click="loadFile(file)"
@@ -82,17 +68,5 @@
     <script src="js/jstree.min.js"></script>
 
     <script type="text/javascript" src="js/app.js"></script>
-
-    <script>
-        $(function () { $('#jstree').jstree(); });
-        $('#jstree').on("changed.jstree", function (e, data) {
-            console.log(data.selected);
-        });
-        $('button').on('click', function () {
-            $('#jstree').jstree(true).select_node('child_node_1');
-            $('#jstree').jstree('select_node', 'child_node_1');
-            $.jstree.reference('#jstree').select_node('child_node_1');
-        });
-    </script>
 </body>
 </html>
