@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Symantec DLP SQL</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/rainbow.css" type="text/css">
+    <link rel="stylesheet" href="js/themes/default/style.min.css" />
+</head>
+
+<body ng-app="app">
+
+    <div ng-controller="MainCtrl" data-ng-init="init()">
+        <main>
+            <h1>Symantec DLP SQL</h1>
+        </main>
+
+        <div class="container">
+
+            <div class="row justify-content-md-center">
+                <div class="col-lg-8">
+                    <div class="input-group">
+                        <input type="text" class="form-control" ng-model='searchText' placeholder="Search for a Script ..." aria-label="Search">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">
+
+                    <!-- <div id="jstree"> -->
+                        <!-- in this example the tree is populated from inline HTML
+                        <ul>
+                            <li>Root node 1
+                            <ul>
+                                <li id="child_node_1">Child node 1</li>
+                                <li>Child node 2</li>
+                            </ul>
+                            </li>
+                            <li>Root node 2</li>
+                        </ul> -->
+                    <!-- </div> -->
+
+                    <div>
+                        <p ng-repeat="file in files | filter:searchText"
+                            ng-click="loadFile(file)"
+                            ng-class="{'active':selectedFile === file}"
+                        >
+                            {{file.fileName}}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <!-- Dynamically add the script from the choice -->
+                    <div id="script"></div>
+                </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js" ></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-slim.min.js"><\/script>')</script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/rainbow-custom.min.js"></script>
+    <script src="js/jstree.min.js"></script>
+
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <script>
+        $(function () { $('#jstree').jstree(); });
+        $('#jstree').on("changed.jstree", function (e, data) {
+            console.log(data.selected);
+        });
+        $('button').on('click', function () {
+            $('#jstree').jstree(true).select_node('child_node_1');
+            $('#jstree').jstree('select_node', 'child_node_1');
+            $.jstree.reference('#jstree').select_node('child_node_1');
+        });
+    </script>
+</body>
+</html>

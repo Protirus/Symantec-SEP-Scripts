@@ -1,0 +1,16 @@
+body {
+    background: #4d67c1;
+}
+
+main > h1 {
+    color: #f7ba28;
+    -webkit-text-fill-color: #f7ba28; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+.active {
+    color: white;
+    font-weight: bold;
+    /* background-color: red; */
+}
