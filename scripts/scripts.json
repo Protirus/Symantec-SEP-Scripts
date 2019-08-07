@@ -1,0 +1,14 @@
+[
+    {
+        "name":"List of computers that requested full zip.sql",
+        "versions":["12.x"],
+        "author": {
+            "name": "Arjun2228",
+            "link": "https://www.symantec.com/connect/user/arjun2228"
+        },
+        "sources": [
+            "https://www.symantec.com/connect/articles/handy-sql-queries-sepm-v14", 
+            "https://www.symantec.com/connect/forums/sql-query-get-list-computers-requested-full-zip"
+        ]
+    }
+]
