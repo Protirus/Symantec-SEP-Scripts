@@ -10,5 +10,16 @@
             "https://www.symantec.com/connect/articles/handy-sql-queries-sepm-v14", 
             "https://www.symantec.com/connect/forums/sql-query-get-list-computers-requested-full-zip"
         ]
+    },
+    {
+        "name":"Reputation Error Events.sql",
+        "versions":["12.x"],
+        "author": {
+            "name": "tknorr",
+            "link": "https://www.symantec.com/connect/user/tknorr"
+        },
+        "sources": [
+            "https://www.symantec.com/connect/articles/handy-sql-queries-sepm-v14"
+        ]
     }
 ]
