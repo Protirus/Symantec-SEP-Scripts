@@ -43,5 +43,16 @@
         "sources": [
             "https://www.symantec.com/connect/articles/handy-sql-queries-sepm-v14"
         ]
+    },
+    {
+        "name":"Get the Domain ID & name of your Domains.sql",
+        "versions":["12.x"],
+        "author": {
+            "name": "Ian_C",
+            "link": "https://www.symantec.com/connect/user/Ian_C"
+        },
+        "sources": [
+            "https://www.symantec.com/connect/articles/handy-sql-queries-sepm-v14"
+        ]
     }
 ]
