@@ -40,17 +40,32 @@
             <div class="row">
                 <div class="col-md-2">
                     <div>
-                        <p ng-repeat="file in files | filter:searchText"
+                        <div ng-repeat="file in files | filter:searchText"
                             ng-click="loadFile(file)"
                             ng-class="{'active':selectedFile === file}"
                         >
-                            {{file.fileName}}
-                        </p>
+                            {{file.name}}
+
+                            <div ng-repeat="version in file.versions">
+                                <span class="badge badge-pill badge-warning" style="margin-left:5px;">{{version}}</span>
+                            </div>
+
+                            <span class="badge badge-pill badge-secondary" 
+                            style="margin-left:5px;"
+                            title="{{file.author.link}}">
+                                {{file.author.name}}
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-10">
                     <!-- Dynamically add the script from the choice -->
                     <div id="script"></div>
+                    <div id="sources">
+                        <div ng-repeat="source in selectedFile.sources">
+                            <span class=""><a ng-href="{{source}}">{{source}}</a></span>
+                        </div>
+                    </div>
                 </div>
                 </div>
             </div>

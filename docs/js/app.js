@@ -6,7 +6,8 @@ app.controller('MainCtrl', ['$scope', '$http', '$filter',
 
         var req = {
             method: 'GET',
-            url: 'https://api.github.com/repos/AlexHedley/Symantec-SEP-Scripts/contents/scripts',
+            //url: 'https://api.github.com/repos/AlexHedley/Symantec-SEP-Scripts/contents/scripts/',
+            url: 'https://raw.githubusercontent.com/AlexHedley/Symantec-SEP-Scripts/master/scripts/scripts.json',
             // https://raw.githubusercontent.com/:owner/:repo/master/:path
             // https://raw.githubusercontent.com/Protirus/Tagger/master/README.md
             headers: {
@@ -18,12 +19,7 @@ app.controller('MainCtrl', ['$scope', '$http', '$filter',
             $http(req)
                 .then(function(response) {
                     angular.forEach(response.data, function(item) {
-                        var fileName = item.name.split('.').slice(0, -1).join('.');
-                        var ext = item.name.substr(item.name.lastIndexOf('.')+1);
-                        if (ext != 'md') {
-                            item.fileName = fileName;
-                            $scope.files.push(item);
-                        }
+                        $scope.files.push(item);
                     });
                 }
             );
@@ -32,9 +28,6 @@ app.controller('MainCtrl', ['$scope', '$http', '$filter',
 
         $scope.loadFile = (file) => {
             $scope.selectedFile = file;
-            var fileName = file.name.split('.').slice(0, -1).join('.');
-            var ext = file.name.substr(file.name.lastIndexOf('.')+1);
-            
             var url = "https://raw.githubusercontent.com/AlexHedley/Symantec-SEP-Scripts/master/scripts/" + file.name;
 
             var req = {
@@ -48,6 +41,7 @@ app.controller('MainCtrl', ['$scope', '$http', '$filter',
             $http(req)
                 .then(function(response) {
                     $scope.script = response.data;
+                    var ext = file.name.substr(file.name.lastIndexOf('.')+1);
                     var div = $('<div><pre><code data-language="' + ext + '">'+ $scope.script +'</code></pre></div>');
                     Rainbow.color(div[0], function() {
                         $("#script").empty().append(div[0]);
