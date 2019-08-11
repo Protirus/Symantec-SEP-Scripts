@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/sticky-footer.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/rainbow.css" type="text/css">
     <link rel="stylesheet" href="js/themes/default/style.min.css" />
@@ -59,6 +60,10 @@
                     </div>
                 </div>
                 <div class="col-md-10">
+                    <div id="info">
+                        <h2>{{selectedFile.name}}</h2>
+                        <p>{{selectedFile.description}}</p>
+                    </div>
                     <!-- Dynamically add the script from the choice -->
                     <div id="script"></div>
                     <div id="sources">
@@ -73,6 +78,12 @@
         </div>
 
     </div>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted"><a href="https://www.protirus.com" target="_blank">Protirus</a></span>
+        </div>
+    </footer>
 
     <script src="js/jquery-3.3.1.min.js" ></script>
     <script>window.jQuery || document.write('<script src="js/jquery-slim.min.js"><\/script>')</script>
