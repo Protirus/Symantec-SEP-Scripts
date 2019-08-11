@@ -240,17 +240,5 @@
         "sources": [
             "https://www.symantec.com/connect/articles/compilation-sql-queries-sepm-database#comment-12020701"
         ]
-    },
-    {
-        "name":".sql",
-        "description":"",
-        "versions":["12.x"],
-        "author": {
-            "name": "interchk",
-            "link": "https://www.symantec.com/connect/user/interchk"
-        },
-        "sources": [
-            "https://www.symantec.com/connect/articles/compilation-sql-queries-sepm-database#comment-11432331"
-        ]
     }
 ]
