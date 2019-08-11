@@ -1,6 +1,7 @@
 [
     {
         "name":"List of computers that requested full zip.sql",
+        "description":"",
         "versions":["12.x"],
         "author": {
             "name": "Arjun2228",
@@ -13,6 +14,7 @@
     },
     {
         "name":"Reputation Error Events.sql",
+        "description":"",
         "versions":["12.x"],
         "author": {
             "name": "tknorr",
@@ -24,6 +26,7 @@
     },
     {
         "name":"Check the size of the stored content in GB (without client packages) in the database.sql",
+        "description":"",
         "versions":["12.x"],
         "author": {
             "name": "greg12",
@@ -35,6 +38,7 @@
     },
     {
         "name":"List of Unmanaged Detectors.sql",
+        "description":"",
         "versions":["12.x"],
         "author": {
             "name": "greg12",
@@ -46,6 +50,7 @@
     },
     {
         "name":"Get the Domain ID & name of your Domains.sql",
+        "description":"",
         "versions":["12.x"],
         "author": {
             "name": "Ian_C",
@@ -53,6 +58,199 @@
         },
         "sources": [
             "https://www.symantec.com/connect/articles/handy-sql-queries-sepm-v14"
+        ]
+    },
+    {
+        "name":"SEP Client Information.sql",
+        "description":"",
+        "versions":["12.x"],
+        "author": {
+            "name": "SebastianZ",
+            "link": "https://www.symantec.com/connect/user/sebastianz"
+        },
+        "sources": [
+            "https://www.symantec.com/connect/articles/compilation-sql-queries-sepm-database"
+        ]
+    },
+    {
+        "name":"SEP Client Information 2.sql",
+        "description":"",
+        "versions":["12.x"],
+        "author": {
+            "name": "SebastianZ",
+            "link": "https://www.symantec.com/connect/user/sebastianz"
+        },
+        "sources": [
+            "https://www.symantec.com/connect/articles/compilation-sql-queries-sepm-database"
+        ]
+    },
+    {
+        "name":"SEP Client ID Information.sql",
+        "description":"",
+        "versions":["12.x"],
+        "author": {
+            "name": "SebastianZ",
+            "link": "https://www.symantec.com/connect/user/sebastianz"
+        },
+        "sources": [
+            "https://www.symantec.com/connect/articles/compilation-sql-queries-sepm-database"
+        ]
+    },
+    {
+        "name":"SEP to SEPM Server mapping.sql",
+        "description":"",
+        "versions":["12.x"],
+        "author": {
+            "name": "SebastianZ",
+            "link": "https://www.symantec.com/connect/user/sebastianz"
+        },
+        "sources": [
+            "https://www.symantec.com/connect/articles/compilation-sql-queries-sepm-database"
+        ]
+    },
+    {
+        "name":"SEP Client System Logs.sql",
+        "description":"",
+        "versions":["12.x"],
+        "author": {
+            "name": "SebastianZ",
+            "link": "https://www.symantec.com/connect/user/sebastianz"
+        },
+        "sources": [
+            "https://www.symantec.com/connect/articles/compilation-sql-queries-sepm-database"
+        ]
+    },
+    {
+        "name":"Computer Status check.sql",
+        "description":"",
+        "versions":["12.x"],
+        "author": {
+            "name": "SebastianZ",
+            "link": "https://www.symantec.com/connect/user/sebastianz"
+        },
+        "sources": [
+            "https://www.symantec.com/connect/articles/compilation-sql-queries-sepm-database"
+        ]
+    },
+    {
+        "name":"GUP Server list.sql",
+        "description":"",
+        "versions":["12.x"],
+        "author": {
+            "name": "SebastianZ",
+            "link": "https://www.symantec.com/connect/user/sebastianz"
+        },
+        "sources": [
+            "https://www.symantec.com/connect/articles/compilation-sql-queries-sepm-database"
+        ]
+    },
+    {
+        "name":"Database content size.sql",
+        "description":"",
+        "versions":["12.x"],
+        "author": {
+            "name": "SebastianZ",
+            "link": "https://www.symantec.com/connect/user/sebastianz"
+        },
+        "sources": [
+            "https://www.symantec.com/connect/articles/compilation-sql-queries-sepm-database"
+        ]
+    },
+    {
+        "name":"Duplicated HWID query.sql",
+        "description":"",
+        "versions":["12.x"],
+        "author": {
+            "name": "SebastianZ",
+            "link": "https://www.symantec.com/connect/user/sebastianz"
+        },
+        "sources": [
+            "https://www.symantec.com/connect/articles/compilation-sql-queries-sepm-database"
+        ]
+    },
+    {
+        "name":"Virus definitions query.sql",
+        "description":"",
+        "versions":["12.x"],
+        "author": {
+            "name": "SebastianZ",
+            "link": "https://www.symantec.com/connect/user/sebastianz"
+        },
+        "sources": [
+            "https://www.symantec.com/connect/articles/compilation-sql-queries-sepm-database"
+        ]
+    },
+    {
+        "name":"Hardware and BIOS check.sql",
+        "description":"",
+        "versions":["12.x"],
+        "author": {
+            "name": "SebastianZ",
+            "link": "https://www.symantec.com/connect/user/sebastianz"
+        },
+        "sources": [
+            "https://www.symantec.com/connect/articles/compilation-sql-queries-sepm-database"
+        ]
+    },
+    {
+        "name":"Computer_User mode query.sql",
+        "description":"reports on either computer mode ([POLICY_MODE] = 1) or user mode ([POLICY_MODE] = 0) on SEP Client",
+        "versions":["12.x"],
+        "author": {
+            "name": "SebastianZ",
+            "link": "https://www.symantec.com/connect/user/sebastianz"
+        },
+        "sources": [
+            "https://www.symantec.com/connect/articles/compilation-sql-queries-sepm-database"
+        ]
+    },
+    {
+        "name":"Mapping policies against groups.sql",
+        "description":"",
+        "versions":["12.x"],
+        "author": {
+            "name": "interchk",
+            "link": "https://www.symantec.com/connect/user/interchk"
+        },
+        "sources": [
+            "https://www.symantec.com/connect/articles/compilation-sql-queries-sepm-database#comment-11432341",
+            "https://www.symantec.com/connect/articles/compilation-sql-queries-sepm-database#comment-11611451"
+        ]
+    },
+    {
+        "name":"Duplicate Host name.sql",
+        "description":"",
+        "versions":["12.x"],
+        "author": {
+            "name": "interchk",
+            "link": "https://www.symantec.com/connect/user/interchk"
+        },
+        "sources": [
+            "https://www.symantec.com/connect/articles/compilation-sql-queries-sepm-database#comment-11432331"
+        ]
+    },
+    {
+        "name":"Alerting Definition Sets.sql",
+        "description":"",
+        "versions":["12.x"],
+        "author": {
+            "name": "Eddie Velez",
+            "link": "https://www.symantec.com/connect/user/eddie-velez"
+        },
+        "sources": [
+            "https://www.symantec.com/connect/articles/compilation-sql-queries-sepm-database#comment-12020701"
+        ]
+    },
+    {
+        "name":".sql",
+        "description":"",
+        "versions":["12.x"],
+        "author": {
+            "name": "interchk",
+            "link": "https://www.symantec.com/connect/user/interchk"
+        },
+        "sources": [
+            "https://www.symantec.com/connect/articles/compilation-sql-queries-sepm-database#comment-11432331"
         ]
     }
 ]

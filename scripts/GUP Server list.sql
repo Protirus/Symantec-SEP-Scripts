@@ -1,0 +1,57 @@
+-- GUP Server list
+-- https://www.symantec.com/connect/articles/compilation-sql-queries-sepm-database
+-- SebastianZ
+SELECT Name,
+	IP_ADDR1_TEXT,
+	left(IP_ADDR1_TEXT, Len(IP_ADDR1_TEXT) - CHARINDEX('.', Reverse(IP_ADDR1_TEXT))) AS Network
+FROM SEM_AGENT AS SA
+    LEFT OUTER JOIN V_SEM_COMPUTER AS COMP ON SA.COMPUTER_ID = COMP.COMPUTER_ID
+    LEFT OUTER JOIN IDENTITY_MAP AS ID_MAP ON ID_MAP.ID = SA.GROUP_ID
+WHERE SA.AP_ONOFF != 2
+	AND SA.DELETED = '0'
+	AND MAJOR_VERSION != '5'
+	AND SA.AGENT_TYPE = '105'
+	AND SA.computer_id IN (
+		SELECT computer_id
+		FROM GUP_list
+		)
+GROUP BY left(IP_ADDR1_TEXT, Len(IP_ADDR1_TEXT) - CHARINDEX('.', Reverse(IP_ADDR1_TEXT))),
+	name,
+	ip_addr1_text
+
+DECLARE @TimeZoneDiff INT
+SELECT @TimeZoneDiff = datediff(minute, getutcdate(), getdate())
+
+SELECT [GUP_LIST].[GUP_ID],
+	[GUP_LIST].[COMPUTER_ID],
+	UPPER([SEM_COMPUTER].[COMPUTER_NAME]),
+	[GUP_LIST].[IP_ADDRESS],
+	CAST((
+			CASE 
+				WHEN IP_ADDRESS < 0
+					THEN 0xFFFFFFFF + IP_ADDRESS
+				ELSE IP_ADDRESS
+				END / 256 / 256 / 256
+			) & 0xFF AS VARCHAR) + '.' + CAST((
+			CASE 
+				WHEN IP_ADDRESS < 0
+					THEN 0xFFFFFFFF + IP_ADDRESS
+				ELSE IP_ADDRESS
+				END / 256 / 256
+			) & 0xFF AS VARCHAR) + '.' + CAST((
+			CASE 
+				WHEN IP_ADDRESS < 0
+					THEN 0xFFFFFFFF + IP_ADDRESS
+				ELSE IP_ADDRESS
+				END / 256
+			) & 0xFF AS VARCHAR) + '.' + CAST(CASE 
+			WHEN IP_ADDRESS < 0
+				THEN 0xFFFFFFFF + IP_ADDRESS
+			ELSE IP_ADDRESS
+			END & 0xFF AS VARCHAR) AS GUP_IP_ADDRESS,
+	[GUP_LIST].[PORT],
+	[GUP_LIST].[USN],
+	dateadd(minute, @TimeZoneDiff, dateadd(second, [GUP_LIST].[TIME_STAMP] / 1000, '01-01-1970 00:00:00')) AS [Time Stamp],
+	[GUP_LIST].[DELETED]
+FROM [dbo].[GUP_LIST]
+    LEFT OUTER JOIN dbo.SEM_COMPUTER ON dbo.GUP_LIST.COMPUTER_ID = dbo.SEM_COMPUTER.COMPUTER_ID
