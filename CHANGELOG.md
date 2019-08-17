@@ -3,6 +3,11 @@
 // https://github.com/olivierlacan/keep-a-changelog
 // https://keepachangelog.com/en/1.0.0/
 
+## [0.0.1] - 2019-08-17
+### Added
+- Added copy button.
+- Added pagination.
+
 ## [0.0.1] - 2019-08-11
 ### Added
 - Added scripts from another Article.
