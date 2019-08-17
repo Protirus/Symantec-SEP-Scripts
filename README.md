@@ -6,11 +6,11 @@ Symantec Endpoint Protection Scripts
 [![SMP](https://img.shields.io/badge/tag-sep-yellow.svg)](https://www.symantec.com/products/endpoint-protection)
 [![SQL](https://img.shields.io/badge/language-sql-green.svg)](https://en.wikipedia.org/wiki/SQL)
 |
-[![GitHub contributors](https://img.shields.io/github/contributors/AlexHedley/Symantec-SEP-Scripts.svg)](https://GitHub.com/AlexHedley/Symantec-SEP-Scripts/graphs/contributors/)
+[![GitHub contributors](https://img.shields.io/github/contributors/Protirus/Symantec-SEP-Scripts.svg)](https://GitHub.com/Protirus/Symantec-SEP-Scripts/graphs/contributors/)
 |
-[![GitHub issues](https://img.shields.io/github/issues/AlexHedley/Symantec-SEP-Scripts.svg)](https://GitHub.com/AlexHedley/Symantec-SEP-Scripts/issues/)
-[![GitHub issues-closed](https://img.shields.io/github/issues-closed/AlexHedley/Symantec-SEP-Scripts.svg)](https://GitHub.com/AlexHedley/Symantec-SEP-Scripts/issues?q=is%3Aissue+is%3Aclosed)
-[![GitHub pull-requests](https://img.shields.io/github/issues-pr/AlexHedley/Symantec-SEP-Scripts.svg)](https://GitHub.com/AlexHedley/Symantec-SEP-Scripts/pull/)
+[![GitHub issues](https://img.shields.io/github/issues/Protirus/Symantec-SEP-Scripts.svg)](https://GitHub.com/Protirus/Symantec-SEP-Scripts/issues/)
+[![GitHub issues-closed](https://img.shields.io/github/issues-closed/Protirus/Symantec-SEP-Scripts.svg)](https://GitHub.com/Protirus/Symantec-SEP-Scripts/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/Protirus/Symantec-SEP-Scripts.svg)](https://GitHub.com/Protirus/Symantec-SEP-Scripts/pull/)
 
 Helpful SEP Scripts
 
