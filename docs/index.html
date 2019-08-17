@@ -64,8 +64,11 @@
                         <h2>{{selectedFile.name}}</h2>
                         <p>{{selectedFile.description}}</p>
                     </div>
+
+                    <button id="copyscriptbutton" class="copy-code-button" type="button">Copy</button>
                     <!-- Dynamically add the script from the choice -->
                     <div id="script"></div>
+
                     <div id="sources">
                         <div ng-repeat="source in selectedFile.sources">
                             <span class=""><a ng-href="{{source}}">{{source}}</a></span>
@@ -91,7 +94,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="js/rainbow-custom.min.js"></script>
-    <script src="js/jstree.min.js"></script>
+    <script src="js/clipboard-polyfill.js"></script>
 
     <script type="text/javascript" src="js/app.js"></script>
 </body>

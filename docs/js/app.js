@@ -58,3 +58,17 @@ app.controller('MainCtrl', ['$scope', '$http', '$filter',
     }
 ]
 );
+
+$("#copyscriptbutton").on("click", function() {
+    var button = $(this)[0];
+    console.log(button);
+    button.innerText = 'Copied!';
+    var text = $('#script > div > pre')[0].innerText;
+    console.log(text);
+    //document.execCommand("copy");
+    clipboard.writeText(text);
+
+    setTimeout(function () {
+        button.innerText = 'Copy';
+    }, 2000);
+});
