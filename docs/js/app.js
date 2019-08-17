@@ -1,8 +1,22 @@
-var app = angular.module('app', []);
+var app = angular.module('app', ['ngAnimate', 'ngSanitize', 'ui.bootstrap']);
 
 app.controller('MainCtrl', ['$scope', '$http', '$filter',
     function ($scope, $http, $filter) {
-        $scope.location = window.location.pathname;
+        
+        $scope.totalItems = 0;
+        $scope.currentPage = 1;
+        $scope.maxSize = 5;
+        $scope.itemsPerPage = 5;
+        
+        $scope.setPage = function (pageNo) {
+            $scope.currentPage = pageNo;
+        };
+
+        $scope.pageChanged = function() {
+            $log.log('Page changed to: ' + $scope.currentPage);
+        };
+
+        //$scope.location = window.location.pathname;
 
         var req = {
             method: 'GET',
@@ -21,6 +35,8 @@ app.controller('MainCtrl', ['$scope', '$http', '$filter',
                     angular.forEach(response.data, function(item) {
                         $scope.files.push(item);
                     });
+
+                    $scope.totalItems = response.data.length
                 }
             );
 

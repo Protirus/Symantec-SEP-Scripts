@@ -41,7 +41,8 @@
             <div class="row">
                 <div class="col-md-2">
                     <div>
-                        <div ng-repeat="file in files | filter:searchText"
+                        <div 
+                            ng-repeat="file in files.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage)) | filter:searchText"
                             ng-click="loadFile(file)"
                             ng-class="{'active':selectedFile === file}"
                         >
@@ -57,6 +58,8 @@
                                 {{file.author.name}}
                             </span>
                         </div>
+                        <ul uib-pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" force-ellipses="true"></ul>
+                        <!-- <pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" class="pagination-sm" items-per-page="itemsPerPage"></pagination> -->
                     </div>
                 </div>
                 <div class="col-md-10">
@@ -93,6 +96,9 @@
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/angular.min.js"></script>
+    <script src="js/angular-animate.js"></script>
+    <script src="js/angular-sanitize.js"></script>
+    <script src="js/ui-bootstrap-tpls-2.5.0.js"></script>
     <script src="js/rainbow-custom.min.js"></script>
     <script src="js/clipboard-polyfill.js"></script>
 
