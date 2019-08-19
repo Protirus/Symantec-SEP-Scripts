@@ -20,8 +20,8 @@ app.controller('MainCtrl', ['$scope', '$http', '$filter',
 
         var req = {
             method: 'GET',
-            //url: 'https://api.github.com/repos/AlexHedley/Symantec-SEP-Scripts/contents/scripts/',
-            url: 'https://raw.githubusercontent.com/AlexHedley/Symantec-SEP-Scripts/master/scripts/scripts.json',
+            //url: 'https://api.github.com/repos/Protirus/Symantec-SEP-Scripts/contents/scripts/',
+            url: 'https://raw.githubusercontent.com/Protirus/Symantec-SEP-Scripts/master/scripts/scripts.json',
             // https://raw.githubusercontent.com/:owner/:repo/master/:path
             // https://raw.githubusercontent.com/Protirus/Tagger/master/README.md
             headers: {
@@ -44,7 +44,7 @@ app.controller('MainCtrl', ['$scope', '$http', '$filter',
 
         $scope.loadFile = (file) => {
             $scope.selectedFile = file;
-            var url = "https://raw.githubusercontent.com/AlexHedley/Symantec-SEP-Scripts/master/scripts/" + file.name;
+            var url = "https://raw.githubusercontent.com/Protirus/Symantec-SEP-Scripts/master/scripts/" + file.name;
 
             var req = {
                 method: 'GET',
